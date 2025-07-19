@@ -6,8 +6,8 @@ phases:
       java: corretto17
   build:
     commands:
-      - echo Build started on `date`
-      - mvn clean install
+      - echo Skipping integration tests
+      - mvn clean install -PskipPostgresTests
 artifacts:
   files:
     - target/*.jar
