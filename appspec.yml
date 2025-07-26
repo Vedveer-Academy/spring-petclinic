@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+files:
+  - source: target/spring-petclinic-*.jar
+    destination: /home/ubuntu/petclinic
+
+hooks:
+  AfterInstall:
+    - location: scripts/start_app.sh
+      timeout: 180
+      runas: ubuntu
